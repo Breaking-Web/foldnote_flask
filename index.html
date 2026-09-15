@@ -1,0 +1,18 @@
+<!doctype html><html lang="sv"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ff7a00"><title>FoldNote</title>
+<link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="app"><aside class="sidebar"><div class="brand">Fold<span>Note</span></div>
+<button class="primary" id="newNote">＋ Ny anteckning</button><div id="noteList" class="note-list"></div>
+<div class="sidebottom"><button id="themeBtn">◐ Auto</button><a href="/api/export">⇩ Excel</a></div></aside>
+<main class="main"><header><button class="mobile-menu" id="menuBtn">☰</button><div class="headfields"><input id="title" placeholder="Namnlös anteckning"><input id="tags" placeholder="Taggar, projekt, idéer…"></div><span id="status"></span></header>
+<section id="empty" class="empty"><div><h1>Skriv. Markera. Jämför.</h1><p>Skapa en anteckning och markera valfri text för att skapa alternativa formuleringar.</p><button class="primary" id="emptyNew">Skapa anteckning</button></div></section>
+<section id="editor" hidden><div class="editor-toolbar">
+<button id="undo" title="Ångra">↶</button><button id="redo" title="Gör om">↷</button><span></span><button id="saveBtn" class="primary">Spara</button></div>
+<div class="workspace">
+<section class="document-pane"><div class="doc-label">ANTECKNING</div>
+<div id="document" class="document" contenteditable="true" data-placeholder="Börja skriva här… Du kan markera vilken del av texten som helst för att skapa alternativa formuleringar."></div>
+<div id="selectionBar" class="selection-bar" hidden><span id="selectionPreview"></span><button id="createVariant" class="primary">✦ Skapa alternativ</button><button id="cancelSelection">Avbryt</button></div></section>
+<aside class="variants-pane"><div class="variants-head"><div><b>Alternativ</b><small id="variantCount">0 markerade delar</small></div></div><div id="variants" class="variants-empty">Markera text i anteckningen för att skapa en alternativ formulering.</div></aside>
+</div></section></main></div>
+<script src="/static/app.js"></script></body></html>
